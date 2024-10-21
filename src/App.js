@@ -1,37 +1,38 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/LandingPage/Navbar';
-//import Header from './Header'; // Adjust the path as necessary
-import Hero from './components/LandingPage/Hero';
-import ProductGrid from './components/LandingPage/ProductGrid';
-import About from './components/LandingPage/About';
-import { Service } from './components/LandingPage/Service';
-// import Shop from './Shop';
-// import About from './About';
-// import Blog from './Blog';
-// import Contact from './Contact';
-// import Cart from './Cart';
+import { BrowserRouter as Router, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
+import Home from './Pages/Home';     // Ensure this path is correct
+import About from './Pages/About';   // Ensure this path is correct
+import Service from './Pages/Service'; // Ensure this path is correct
+import Review from './Pages/Review';  // Ensure this path is correct
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Navbar />
-      <Hero />
-      <Service />
-      <About />
-      <ProductGrid />
+
+    <div>
+
+      <BrowserRouter>
+
+        <Routes>
+
+          <Route index element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/service' element={<Service />} />
+          <Route path='/review' element={<Review />} />
 
 
-      <Routes>
-        {/*  <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} /> */}
-      </Routes>
-    </Router>
+        </Routes>
+
+
+      </BrowserRouter>
+
+
+
+
+
+    </div>
+
+
   );
-};
+}
 
 export default App;

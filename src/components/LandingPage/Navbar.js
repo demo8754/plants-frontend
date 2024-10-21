@@ -23,13 +23,11 @@ const Navbar = () => {
 
             <div className='hidden  lg:flex space-x-5 flex-grow '>
               <ul className='flex font-medium  px-5 font-poppins'>
-                <li><a className='px-3 text-white hover:text-yellow-300' href=''>Home</a></li>
-                <li><a className='px-3 text-white hover:text-yellow-300' href=''>About</a></li>
-                <li><a className='px-3 text-white hover:text-yellow-300' href=''>Service</a></li>
-                <li><a className='px-3 text-white hover:text-yellow-300' href=''>Shop</a></li>
-
-
-                <li><a className='px-3 text-white hover:text-yellow-300' href=''>Review</a></li>
+                <li><a className='px-3 text-white hover:text-yellow-300' href='#home'>Home</a></li>
+                <li><a className='px-3 text-white hover:text-yellow-300' href='#about'>About</a></li>
+                <li><a className='px-3 text-white hover:text-yellow-300' href='#service'>Service</a></li>
+                <li><a className='px-3 text-white hover:text-yellow-300' href='#brands'>Brands</a></li>
+                <li><a className='px-3 text-white hover:text-yellow-300' href='#review'>Review</a></li>
               </ul>
             </div>
 
@@ -56,11 +54,11 @@ const Navbar = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <ul className='lg:hidden font-medium mt-5 space-y-2 font-poppins'>
-              <li><a className='text-white' href=''>Home</a></li>
-              <li><a className='text-white' href=''>About</a></li>
-              <li><a className='text-white' href=''>Service</a></li>
-              <li><a className='text-white' href=''>Review</a></li>
-              <li><a className='text-white' href=''>Cart</a></li>
+              <li><a className='text-white' href='#home'>Home</a></li>
+              <li><a className='text-white' href='#about'>About</a></li>
+              <li><a className='text-white' href='#service'>Service</a></li>
+              <li><a className='text-white' href='#review'>Review</a></li>
+              <li><a className='text-white' href='#cart'>Cart</a></li>
             </ul>
           )}
 
